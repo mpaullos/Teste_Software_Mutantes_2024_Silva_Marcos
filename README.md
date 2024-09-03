@@ -137,3 +137,5 @@ Na imagem, é possível perceber que um mutante foi corrigido, restando agora ap
 **Resultado Final:**
 
 <img src="https://raw.githubusercontent.com/mpaullos/Teste_Software_Mutantes_2024_Silva_Marcos/main/artefatos/images/16.png" alt="Imagem mostrando o resultado final após as correções" />
+
+[Artefatos gerados no testes](https://github.com/mpaullos/Teste_Software_Mutantes_2024_Silva_Marcos/tree/main/artefatos)
