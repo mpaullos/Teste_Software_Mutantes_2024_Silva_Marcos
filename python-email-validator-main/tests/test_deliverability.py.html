@@ -1,0 +1,34 @@
+<html><body><h1>/home/marcospaulo/Downloads/python-email-validator-main/tests/test_deliverability.py</h1>Killed 59 out of 62 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 73</h3><pre>--- /home/marcospaulo/Downloads/python-email-validator-main/tests/test_deliverability.py
++++ /home/marcospaulo/Downloads/python-email-validator-main/tests/test_deliverability.py
+@@ -61,7 +61,7 @@
+ 
+ def test_deliverability_dns_timeout() -> None:
+     response = validate_email_deliverability('timeout.com', 'XXXXXXtimeout.comXXXXXX', dns_resolver=RESOLVER)
+-    assert "XXmxXX" not in response
++    assert "XXXXmxXXXX" not in response
+     assert response.get("unknown-deliverability") == "timeout"
+ 
+ 
+</pre><h3>Mutant 76</h3><pre>--- /home/marcospaulo/Downloads/python-email-validator-main/tests/test_deliverability.py
++++ /home/marcospaulo/Downloads/python-email-validator-main/tests/test_deliverability.py
+@@ -78,7 +78,7 @@
+             self.cache[key] = None
+ 
+     cache = TestCache()
+-    resolver = caching_resolver(timeout=1, cache=cache)
++    resolver = caching_resolver(timeout=2, cache=cache)
+     validate_email("test@gmail.com", dns_resolver=resolver)
+     assert len(cache.cache) == 1
+ 
+</pre><h3>Mutant 79</h3><pre>--- /home/marcospaulo/Downloads/python-email-validator-main/tests/test_deliverability.py
++++ /home/marcospaulo/Downloads/python-email-validator-main/tests/test_deliverability.py
+@@ -60,7 +60,7 @@
+ 
+ 
+ def test_deliverability_dns_timeout() -> None:
+-    response = validate_email_deliverability('timeout.com', 'XXXXXXtimeout.comXXXXXX', dns_resolver=RESOLVER)
++    response = validate_email_deliverability('timeout.com', 'XXXXXXXXtimeout.comXXXXXXXX', dns_resolver=RESOLVER)
+     assert "XXmxXX" not in response
+     assert response.get("unknown-deliverability") == "timeout"
+ 
+</pre></body></html>
